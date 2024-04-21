@@ -1,0 +1,43 @@
+/* Base styles and the variables*/
+:root {
+    --main-backgColor: color(from #ffffff xyz calc(x + 0.0) y calc(z - 0.00));
+    --text-color: #333;
+    --fallback-color: black;
+    --main-padding: 10px;
+    --link-color: #007bff;
+}
+
+body {
+    background-color: var(--main-backgColor);
+    color: var(--text-color, var(--fallback-color));
+    font-family: 'American Typewriter', serif;
+  }
+
+header, nav, main, section, footer, details, form {
+    margin: var(--main-padding);
+    padding: var(--main-padding);
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+/* Navigation styles */
+nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration:  underline;
+}
+
+/* Section styling with ID and Class selectors */
+#introduction, #agenda, #discussion, #multimedia {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(255,0,0,0.3);
+}
+
+/* Using all types of combinators */
+h2 + ol, h3 + p {
+    margin-top: 10px;
+}
