@@ -52,15 +52,60 @@
 
         <section id="multimedia">
             <h2>Multimedia</h2>
-            <img src="MUlogo.png" alt="Manchester United logo" height="200"> <br> <br>
+            <div class="container">
+                <img src="MUlogo.png" alt="Manchester United logo" height="200" id="muLogo"> <br> <br>
+            </div>
             <audio controls>
                 <source src="GGMU.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
-            </audio> <br> <br>
-            <video controls width="600" height="320">
-                <source src="TheoH.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            </audio> 
+            <style>
+                audio {
+                    width: 100%; /* Makes the audio player stretch to full container width */
+                }  
+                audio::-webkit-media-controls-panel {
+                    background-color: red; 
+                    color: black; /* Text color */
+                }
+                audio::-webkit-media-controls-play-button {
+                    opacity: 1; 
+                }
+                audio::-webkit-media-controls-volume-slider {
+                    color: white; /* primary color for the volume slider */
+                }
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 350px;
+                    width: 350px; 
+                    margin: auto; 
+                }
+                #muLogo {
+                    border-radius: 100%; 
+                    width: 250px; 
+                    height: 250px; 
+                    object-fit: cover; 
+                    box-shadow: 0 0 25px rgba(0,0,0,0.5); 
+                }
+                .video-container {
+                    display: flex;
+                    justify-content: center; /* Center horizontally */
+                    align-items: center; /* Center vertically */
+                    height: 10cm; 
+                }
+                #TheoVid {
+                    width: 600px; /* Adjust size as needed */
+                    height: 320px; /* Adjust size as needed */
+                    object-fit: cover; /* Ensures the image covers the set dimensions */
+                }
+            </style> <br><br>
+            <div class="video-container">
+                <video controls width="600" height="320" id="TheoVid">
+                    <source src="TheoH.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> <br><br>
+            </div>
         </section>
         
         <details style="box-shadow: 0 0 25px rgba(255,0,0,0.2);">
