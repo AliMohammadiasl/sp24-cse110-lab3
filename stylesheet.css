@@ -1,6 +1,6 @@
 /* Base styles and the variables*/
 :root {
-    --main-backgColor: color(from #ffffff xyz calc(x + 0.0) y calc(z - 0.00));
+    --main-backgColor: color(from #ffffff xyz calc(x + 0) y calc(z - 0));
     --text-color: rgb(51,51,51);
     --fallback-color: black;
     --main-padding: 10px;
@@ -24,7 +24,7 @@ header, nav, main, section, footer, details, form {
     border-radius: 7mm;
     border-width: 1.1q;
     border-style: groove;
-    border-color: hsl(255, 75, 25);
+    border-color: hsl(255, 63%, 39%);
 }
 
 /* Navigation styles */
