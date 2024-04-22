@@ -1,10 +1,14 @@
 /* Base styles and the variables*/
 :root {
     --main-backgColor: color(from #ffffff xyz calc(x + 0.0) y calc(z - 0.00));
-    --text-color: #333;
+    --text-color: rgb(51,51,51);
     --fallback-color: black;
     --main-padding: 10px;
     --link-color: #007bff;
+}
+
+* {
+    margin: 10px;
 }
 
 body {
@@ -16,28 +20,97 @@ body {
 header, nav, main, section, footer, details, form {
     margin: var(--main-padding);
     padding: var(--main-padding);
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
+    border: 1vh  ;
+    border-radius: 7mm;
+    border-width: 1.1q;
+    border-style: groove;
+    border-color: hsl(255, 75, 25);
 }
 
 /* Navigation styles */
-nav a {
+nav > a {
     color: var(--link-color);
+    display: inline-block;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: .5cm 0.5cm .5cm .5cm;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--main-backgColor);
 }
 
 nav a:hover {
     text-decoration:  underline;
 }
 
+nav a:active {
+    background-color: black; 
+}
+
+nav a:focus{
+    outline: none;
+}
+
+
+#headerSec {
+    box-shadow: 0 0 2em rgba(252,223,3,0.6);
+}
+
 /* Section styling with ID and Class selectors */
 #introduction, #agenda, #discussion, #multimedia {
     background-color: #ffffff;
-    box-shadow: 0 0 25px rgba(255,0,0,0.3);
+    box-shadow: 0 0 3vw rgba(255,0,0,0.3);
 }
 
+h1 {
+    text-align: center;
+    margin: 20px 10px 20px 10px
+}
+#introduction {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
 /* Using all types of combinators */
 h2 + ol, h3 + p {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+textarea[name="comments"] {
+    border: 2px solid black;   
+    padding: 10px;            
+    width: 300px;             
+    height: 100px;            
+    resize: vertical;         
+    outline: none;       
+    box-shadow: 0px 0px 8px rgba(255,0,0,0.5); 
+}
+
+
+@font-face {
+    font-family: new-font;
+    src: url("fonts/Jersey15-Regular.ttf");
+}
+
+.container .description, .container .history {
+    font-family: new-font;
+    font-size: larger;
+}
+    
+div p {
+    color: darkgreen; 
+}
+
+section > div > div ~ div { /* uses both nested and the tilde*/
+    font-style: italic; 
+}
+
+div.container  {
+    font-style: inherit;
+}
+
+div:has(p) {
+    border: 2px solid green;
+}
+
