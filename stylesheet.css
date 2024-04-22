@@ -11,7 +11,7 @@
     margin: 10px;
 }
 
-body {
+body { 
     background-color: var(--main-backgColor);
     color: var(--text-color, var(--fallback-color));
     font-family: 'American Typewriter', serif;
