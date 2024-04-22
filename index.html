@@ -9,11 +9,12 @@
     <title>Meeting Minutes - 05/26/2024</title>
 </head>
 <body>
-    <header>
+    <header id="headerSec">
         <h1>Meeting Minutes for Manchester United managerial team on 05/26/2024.</h1>
+       
         <nav>
-            <a href="#agenda">Agenda</a> |
-            <a href="#discussion">Discussion</a> |
+            <a href="#agenda">Agenda</a> 
+            <a href="#discussion">Discussion</a> 
             <a href="#multimedia">Multimedia</a>
         </nav>
     </header>
@@ -53,51 +54,82 @@
         <section id="multimedia">
             <h2>Multimedia</h2>
             <div class="container">
-                <img src="MUlogo.png" alt="Manchester United logo" height="200" id="muLogo"> <br> <br>
+                <img src="MUlogo.png" alt="Manchester United logo" height="200" id="muLogo"> <br><br><br>
+                <div class="description">Manchester United, nicknamed the Red Devils, is one of the most famous and successful football clubs in the world based in Manchester, England.</div>
+                <div class="history">Founded in 1878 as Newton Heath LYR Football Club, the club changed its name to Manchester United in 1902.</div><br> <br>
             </div>
-            <audio controls>
-                <source src="GGMU.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio> 
+            <div class="audio-grid">    
+                <audio controls>
+                    <source src="GGMU.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio> 
+            </div>
             <style>
-                audio {
-                    width: 100%; /* Makes the audio player stretch to full container width */
-                }  
-                audio::-webkit-media-controls-panel {
+                .audio-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr; 
+                    grid-gap: 20px; 
+                    justify-items: center; 
+                    align-items: center; 
+                    padding: 20px;
+                }
+
+                .audio-grid audio {
+                    width: 1000px;
+                    max-width: 600px; 
+                }
+                .audio-grid audio::-webkit-media-controls-panel {
                     background-color: red; 
                     color: black; /* Text color */
                 }
-                audio::-webkit-media-controls-play-button {
+
+                .audio-grid audio::-webkit-media-controls-play-button {
                     opacity: 1; 
                 }
-                audio::-webkit-media-controls-volume-slider {
-                    color: white; /* primary color for the volume slider */
+
+                .audio-grid audio::-webkit-media-controls-volume-slider {
+                    color: white; /* Primary color for the volume slider */
                 }
+
+
                 .container {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: center; /* Centers children horizontally */
+                    align-items: center; /* Centers children vertically */
                     height: 350px;
-                    width: 350px; 
+                    min-width: 350px; 
                     margin: auto; 
+                    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
                 }
+                .description, .history {
+                    text-align: center;
+                    margin-top: 5px;
+                    width: 90%;
+                }
+
                 #muLogo {
                     border-radius: 100%; 
-                    width: 250px; 
+                    max-width: 250px; 
                     height: 250px; 
                     object-fit: cover; 
                     box-shadow: 0 0 25px rgba(0,0,0,0.5); 
                 }
                 .video-container {
-                    display: flex;
-                    justify-content: center; /* Center horizontally */
-                    align-items: center; /* Center vertically */
+                    position: relative; 
                     height: 10cm; 
+                    text-align: center; 
                 }
+
                 #TheoVid {
-                    width: 600px; /* Adjust size as needed */
-                    height: 320px; /* Adjust size as needed */
-                    object-fit: cover; /* Ensures the image covers the set dimensions */
+                    display: block; 
+                    width: 600px; 
+                    height: 320px; 
+                    object-fit: cover; 
+                    margin: auto; 
+                    position: absolute; 
+                    top: 50%; 
+                    left: 50%; 
+                    transform: translate(-50%, -50%); 
                 }
             </style> <br><br>
             <div class="video-container">
