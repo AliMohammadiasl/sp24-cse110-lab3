@@ -1,6 +1,6 @@
 /* Base styles and the variables*/
 :root {
-    --main-backgColor: color(from #ffffff xyz calc(x + 0.1) y calc(z - 0.10));
+    --main-backgColor: color(srgb 1 1 1 );
     --text-color: rgb(51,51,51);
     --fallback-color: black;
     --main-padding: 10px;
