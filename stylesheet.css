@@ -13,7 +13,7 @@
 
 body { 
     background-color: var(--main-backgColor);
-    color: var(--text-color, var(--fallback-color));
+    color: var(--text-color, black);
     font-family: 'American Typewriter', serif;
   }
 
